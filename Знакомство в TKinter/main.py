@@ -7,7 +7,7 @@ def create_object(array):
 
 def animate():
     oval_2[4] += oval_2[5]
-    moves(e_id, oval_2)
+    moves(id_of_e, oval_2)
     main.after(speed, animate)
 
 def pos_coords(array):
@@ -29,20 +29,19 @@ def moves(object_id, array):
     canv.coords(object_id, x1, y1, x2, y2)
 
 speed = 5
-side_circle = 1 
 
 
 oval_1 = [300, 300, 200, 0, 0, 0, 0, 0]
-oval_2 = [300, 300, 20, 200, 0, side_circle, 0, 0]
+oval_2 = [300, 300, 20, 200, 0, 1, 0, 0]
 
 main = tk.Tk()
-main.title("tkinter")
+main.title("Lab_1")
 
 canv = tk.Canvas(main, width=600, heigh=600, bg="black")
 canv.pack()
 
 create_object(oval_1)
-e_id = create_object(oval_2)
+id_of_e = create_object(oval_2)
 main.geometry('600x600')
 
 animate()
